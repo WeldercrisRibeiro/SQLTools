@@ -292,7 +292,7 @@ class SQLTerminalApp(QMainWindow, Ui_MainWindow):
             self.show_critical_message("Autenticação Falhou", "Usuário ou senha inválidos.")
             return False
 
-    def registrar_log(self, usuario, comando, servidor=None, erro=None):
+    def registrar_log(self, usuario,username,comando, servidor=None, erro=None):
         caminho_log = 'TSQL.wrs'
         caminho_backup = 'C:/Program Files/TSQL/logs'
 
@@ -302,7 +302,7 @@ class SQLTerminalApp(QMainWindow, Ui_MainWindow):
         with open(caminho_log, 'a') as arquivo_log:
             timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
             if servidor:
-                arquivo_log.write(f'{timestamp} - Conectado - {servidor}\n')
+                arquivo_log.write(f'{timestamp} - Conectado - {servidor} -\n')
             if comando:
                 arquivo_log.write(f'{timestamp} - {usuario} - {comando}\n')
             if erro:

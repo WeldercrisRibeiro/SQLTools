@@ -20,3 +20,8 @@
 2024-11-01 16:10:18 - WELDER - select * from param
 2024-11-02 12:29:10 - Conectado - LOCALHOST
 2024-11-02 12:29:12 - WELDER - Erro ao executar a consulta: ('HY090', '[HY090] [Microsoft][ODBC Driver Manager] Comprimento inválido de cadeia de caracteres ou de buffer (0) (SQLExecDirectW)')
+2024-11-02 12:44:35 - Conectado - LOCALHOST
+2024-11-02 12:44:35 - WELDER - SELECT * FROM EMPRE
+2024-11-02 12:48:09 - WELDER - LOCALHOST - None
+2024-11-02 12:50:48 - WELDER - LOCALHOST - None
+2024-11-02 12:52:47 - WELDER - LOCALHOST - None
