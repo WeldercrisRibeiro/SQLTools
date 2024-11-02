@@ -1,0 +1,22 @@
+2024-11-01 14:23:24 - Conectado - LOCALHOST
+2024-11-01 14:23:24 - WELDER - SELECT * FROM EMPRE
+2024-11-01 15:35:47 - Conectado - LOCALHOST
+2024-11-01 15:35:47 - WELDER - SELECT * FROM EMPRE
+2024-11-01 15:35:51 - Conectado - LOCALHOST
+2024-11-01 15:35:51 - WELDER - SELECT * FROM EMPRE
+2024-11-01 15:43:00 - Conectado - LOCALHOST
+2024-11-01 15:43:00 - WELDER - SELECT * FROM EMPRE
+2024-11-01 15:52:32 - Conectado - LOCALHOST
+2024-11-01 15:52:32 - WELDER - SELECT * FROM EMPRE
+2024-11-01 16:06:17 - Conectado - LOCALHOST
+2024-11-01 16:06:17 - WELDER - select * from empre
+2024-11-01 16:08:48 - Conectado - LOCALHOST
+2024-11-01 16:08:48 - WELDER - select * from empre
+2024-11-01 16:10:01 - Conectado - LOCALHOST
+2024-11-01 16:10:01 - WELDER - select * from empre
+2024-11-01 16:10:08 - Conectado - LOCALHOST
+2024-11-01 16:10:08 - WELDER - select * from lojas
+2024-11-01 16:10:18 - Conectado - LOCALHOST
+2024-11-01 16:10:18 - WELDER - select * from param
+2024-11-02 12:29:10 - Conectado - LOCALHOST
+2024-11-02 12:29:12 - WELDER - Erro ao executar a consulta: ('HY090', '[HY090] [Microsoft][ODBC Driver Manager] Comprimento inválido de cadeia de caracteres ou de buffer (0) (SQLExecDirectW)')
