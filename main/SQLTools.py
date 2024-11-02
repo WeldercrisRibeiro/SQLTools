@@ -395,7 +395,7 @@ class SQLTerminalApp(QMainWindow, Ui_MainWindow):
 
     def abrir_configuracao_servidor(self):
         config_dialog = ServerConfigDialog(self)
-        config_dialog.setStyleSheet("color: green;")
+        #config_dialog.setStyleSheet("color: white;")
         config_dialog.exec_()
 
     

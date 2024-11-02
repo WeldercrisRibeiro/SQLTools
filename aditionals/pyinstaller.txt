@@ -1,6 +1,6 @@
 ULTIMO A PEGAR
 
-pyinstaller --onefile --noconsole --icon=sql.ico developer.py
+pyinstaller --onefile --noconsole --icon=src/icons/sql.ico main/SQLTools.py
 
 pyuic5 -x MainWindow.ui -o main_window_ui.py
 

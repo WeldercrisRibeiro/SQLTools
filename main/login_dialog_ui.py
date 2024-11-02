@@ -16,14 +16,19 @@ class Ui_LoginDialog(object):
         LoginDialog.setObjectName("LoginDialog")
         LoginDialog.resize(300, 200)
         LoginDialog.setStyleSheet("QDialog { background-color: black; color: white; }")
+
         self.verticalLayout = QtWidgets.QVBoxLayout(LoginDialog)
         self.verticalLayout.setObjectName("verticalLayout")
+
         self.user_label = QtWidgets.QLabel(LoginDialog)
         self.user_label.setStyleSheet("color: white;")
         self.user_label.setObjectName("user_label")
+
         self.verticalLayout.addWidget(self.user_label)
+
         self.user_entry = QtWidgets.QLineEdit(LoginDialog)
         self.user_entry.setStyleSheet("background-color: black; color: white;")
+
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -45,9 +50,10 @@ class Ui_LoginDialog(object):
         self.password_entry.setSizePolicy(sizePolicy)
         self.password_entry.setObjectName("password_entry")
         self.verticalLayout.addWidget(self.password_entry)
+
         self.login_button = QtWidgets.QPushButton(LoginDialog)
         self.login_button.setStyleSheet("background-color: green; color: white;")
-        self.login_button.setMinimumSize(QtCore.QSize(300, 30))
+        self.login_button.setMinimumSize(QtCore.QSize(200, 50))
         self.login_button.setObjectName("login_button")
         self.verticalLayout.addWidget(self.login_button)
 

@@ -75,7 +75,7 @@ class Ui_ServerConfigDialog(object):
         self.labelDatabase.setText(_translate("ServerConfigDialog", "Banco de Dados:"))
         self.labelUsername.setText(_translate("ServerConfigDialog", "Usuário:"))
         self.labelPassword.setText(_translate("ServerConfigDialog", "Senha:"))
-        self.save_button.setText(_translate("ServerConfigDialog", "Salvar Configurações"))
+        self.save_button.setText(_translate("ServerConfigDialog", "Salvar Configurações - F8"))
         
 
 
