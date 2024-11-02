@@ -136,7 +136,7 @@ class SQLTerminalApp(QMainWindow, Ui_MainWindow):
         
         super().__init__()
         self.setupUi(self)
-        self.setWindowTitle("SQL Terminal")
+        self.setWindowTitle("SQLTools")
         self.usuarios = self.get_users()
         self.login_dialog = LoginDialog()
         #self.setWindowIcon(QIcon("sql.ico")) 

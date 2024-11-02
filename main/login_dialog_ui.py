@@ -53,7 +53,7 @@ class Ui_LoginDialog(object):
 
         self.login_button = QtWidgets.QPushButton(LoginDialog)
         self.login_button.setStyleSheet("background-color: green; color: white;")
-        self.login_button.setMinimumSize(QtCore.QSize(200, 50))
+        self.login_button.setMinimumSize(QtCore.QSize(200, 30))
         self.login_button.setObjectName("login_button")
         self.verticalLayout.addWidget(self.login_button)
 
