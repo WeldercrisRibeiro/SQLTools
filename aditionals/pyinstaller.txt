@@ -42,33 +42,3 @@ pyinstaller --onefile --noconsole  C:\INSTALADOR\BaixarXML_CTG.py
 pyinstaller --onefile --noconsole --icon=C:\INSTALADOR\Delphi7.ico --additional-hooks-dir=C:\Users\weldercris.ribeiro\dist\hooks C:\INSTALADOR\ExeCTG.py
 
 
-pip install cx_Freeze 
---------
-cd C:\INSTALADOR
-python C:\caminho\arquivo.py build
-import sys
-from cx_Freeze import setup, Executable
-
-build_exe_options = {
-    "packages": ["tkinter", "PIL", "pyodbc", "babel.numbers", "tkcalendar"],
-    "include_files": ["C:/INSTALADOR/Delphi7.ico", "C:/INSTALADOR/folder_open.png"],
-    "excludes": [],
-    "include_msvcr": True,
-}
-
-base = None
-if sys.platform == "win32":
-    base = "Win32GUI"
-
-executables = [
-    Executable("ExeCTG.py", base=base, icon="C:/INSTALADOR/Delphi7.ico")
-]
-
-setup(
-    name="Gerador de XML CTG",
-    version="1.0",
-    description="Usado em extra ocasionalidade",
-    options={"build_exe": build_exe_options},
-    executables=executables
-)
-
