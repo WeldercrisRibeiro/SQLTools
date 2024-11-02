@@ -1,5 +1,3 @@
-use [VMD]
-GO
 
 if not exists (select * from master..syslogins where name = N'SQLT')
 	EXEC sp_addlogin N'SQLT', N'SQLT@', N'VMD', N'Português'

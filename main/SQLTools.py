@@ -292,7 +292,7 @@ class SQLTerminalApp(QMainWindow, Ui_MainWindow):
             self.show_critical_message("Autenticação Falhou", "Usuário ou senha inválidos.")
             return False
 
-    def registrar_log(self, usuario,username,comando, servidor=None, erro=None):
+    def registrar_log(self, usuario,comando, servidor=None, erro=None):
         caminho_log = 'TSQL.wrs'
         caminho_backup = 'C:/Program Files/TSQL/logs'
 
