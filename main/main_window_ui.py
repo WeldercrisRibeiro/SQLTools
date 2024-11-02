@@ -14,64 +14,102 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(800, 400)
+        MainWindow.resize(800, 485)
         MainWindow.setStyleSheet("background-color: rgb(0, 0, 0);")
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.query_entry = QtWidgets.QTextEdit(self.centralwidget)
-        self.query_entry.setGeometry(QtCore.QRect(9, 42, 782, 141))
-        self.query_entry.setStyleSheet("color: WHITE;\n""background-color: rgb(0, 0, 0);text-transform: uppercase;font-weight: bold;")
+        self.query_entry.setGeometry(QtCore.QRect(9, 112, 782, 101))
+        self.query_entry.setStyleSheet("color: white;\n"
+"background-color: rgb(0, 0, 0);\n"
+"text-transform: uppercase;\n"
+"font-weight: bold;\n"
+"\n"
+"/*font: 75 8pt \"Cascadia Code\";*/")
         self.query_entry.setObjectName("query_entry")
         self.result_text = QtWidgets.QTextEdit(self.centralwidget)
-        self.result_text.setGeometry(QtCore.QRect(9, 198, 782, 155))
-        self.result_text.setStyleSheet("color: green;\n""background-color: rgb(0, 0, 0);font-weight: bold;")
+        self.result_text.setGeometry(QtCore.QRect(9, 262, 782, 151))
+        self.result_text.setStyleSheet("color: green;\n"
+"background-color: rgb(0, 0, 0);\n"
+"text-transform: uppercase;\n"
+"font-weight: bold;\n"
+"")
         self.result_text.setReadOnly(True)
         self.result_text.setObjectName("result_text")
         self.exit_button = QtWidgets.QPushButton(self.centralwidget)
-        self.exit_button.setGeometry(QtCore.QRect(610, 360, 151, 30))
+        self.exit_button.setGeometry(QtCore.QRect(620, 440, 151, 30))
         self.exit_button.setMinimumSize(QtCore.QSize(100, 30))
-        self.exit_button.setStyleSheet("background-color: red; color: white;")
+        self.exit_button.setStyleSheet("background-color: red; \n"
+"color: white;\n"
+"text-transform: uppercase;\n"
+"font-weight: bold;\n"
+"")
         self.exit_button.setObjectName("exit_button")
         self.clear_button = QtWidgets.QPushButton(self.centralwidget)
-        self.clear_button.setGeometry(QtCore.QRect(200, 360, 151, 30))
+        self.clear_button.setGeometry(QtCore.QRect(210, 440, 151, 30))
         self.clear_button.setMinimumSize(QtCore.QSize(100, 30))
-        self.clear_button.setStyleSheet("background-color: yellow; color: black;")
+        self.clear_button.setStyleSheet("background-color: yellow;\n"
+" color: black;\n"
+"text-transform: uppercase;\n"
+"font-weight: bold;\n"
+"")
         self.clear_button.setObjectName("clear_button")
         self.config_button = QtWidgets.QPushButton(self.centralwidget)
-        self.config_button.setGeometry(QtCore.QRect(400, 360, 151, 30))
+        self.config_button.setGeometry(QtCore.QRect(410, 440, 151, 30))
         self.config_button.setMinimumSize(QtCore.QSize(100, 30))
-        self.config_button.setStyleSheet("background-color: blue; color: white;")
+        self.config_button.setStyleSheet("background-color: blue; \n"
+"color: white;\n"
+"text-transform: uppercase;\n"
+"font-weight: bold;\n"
+"")
         self.config_button.setObjectName("config_button")
         self.execute_button = QtWidgets.QPushButton(self.centralwidget)
-        self.execute_button.setGeometry(QtCore.QRect(10, 360, 151, 30))
+        self.execute_button.setGeometry(QtCore.QRect(20, 440, 151, 30))
         self.execute_button.setMinimumSize(QtCore.QSize(100, 30))
-        self.execute_button.setStyleSheet("background-color: green; color: white;")
+        self.execute_button.setStyleSheet("background-color: green;\n"
+"color: white;\n"
+"text-transform: uppercase;\n"
+"font-weight: bold;\n"
+"")
         self.execute_button.setObjectName("execute_button")
-        self.label = QtWidgets.QLabel(self.centralwidget)
-        self.label.setGeometry(QtCore.QRect(30, 190, 71, 20))
-        font = QtGui.QFont()
-        font.setBold(True)
-        font.setWeight(75)
-        self.label.setFont(font)
-        self.label.setStyleSheet("color: rgb(255, 255, 255);\n"
-"background-color: rgb(0, 0, 0);")
-        self.label.setScaledContents(False)
-        self.label.setObjectName("label")
         self.label_2 = QtWidgets.QLabel(self.centralwidget)
-        self.label_2.setGeometry(QtCore.QRect(20, 30, 71, 20))
+        self.label_2.setGeometry(QtCore.QRect(10, 80, 781, 20))
         font = QtGui.QFont()
         font.setBold(True)
         font.setWeight(75)
         self.label_2.setFont(font)
         self.label_2.setStyleSheet("color: rgb(255, 255, 255);\n"
-"background-color: rgb(0, 0, 0);")
+"background-color: rgb(0, 0, 0);\n"
+"\n"
+"text-transform: uppercase;\n"
+"font-weight: bold;\n"
+"")
         self.label_2.setObjectName("label_2")
         self.label_3 = QtWidgets.QLabel(self.centralwidget)
-        self.label_3.setGeometry(QtCore.QRect(20, 10, 51, 21))
+        self.label_3.setGeometry(QtCore.QRect(730, 10, 51, 31))
         self.label_3.setText("")
         self.label_3.setPixmap(QtGui.QPixmap("src/img/mac.png"))
         self.label_3.setScaledContents(True)
         self.label_3.setObjectName("label_3")
+        self.label_4 = QtWidgets.QLabel(self.centralwidget)
+        self.label_4.setGeometry(QtCore.QRect(10, 230, 781, 20))
+        font = QtGui.QFont()
+        font.setBold(True)
+        font.setWeight(75)
+        self.label_4.setFont(font)
+        self.label_4.setStyleSheet("color: rgb(255, 255, 255);\n"
+"background-color: rgb(0, 0, 0);\n"
+"text-transform: uppercase;\n"
+"font-weight: bold;\n"
+"")
+        self.label_4.setObjectName("label_4")
+        self.label = QtWidgets.QLabel(self.centralwidget)
+        self.label.setGeometry(QtCore.QRect(10, 0, 161, 91))
+        self.label.setText("")
+        self.label.setPixmap(QtGui.QPixmap("src/img/sqltoolsLogo.png"))
+        self.label.setScaledContents(True)
+        self.label.setObjectName("label")
+        self.label.raise_()
         self.query_entry.raise_()
         self.result_text.raise_()
         self.exit_button.raise_()
@@ -80,7 +118,7 @@ class Ui_MainWindow(object):
         self.execute_button.raise_()
         self.label_3.raise_()
         self.label_2.raise_()
-        self.label.raise_()
+        self.label_4.raise_()
         MainWindow.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(MainWindow)
@@ -88,13 +126,13 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "SQLTools"))
+        MainWindow.setWindowTitle(_translate("MainWindow", "SQL Terminal"))
         self.exit_button.setText(_translate("MainWindow", "Sair - F10"))
         self.clear_button.setText(_translate("MainWindow", "Limpar - F6"))
         self.config_button.setText(_translate("MainWindow", "Configuração - F7"))
         self.execute_button.setText(_translate("MainWindow", "Executar - F5"))
-        self.label.setText(_translate("MainWindow", "   Resultado:  "))
-        self.label_2.setText(_translate("MainWindow", "   Consulta:  "))
+        self.label_2.setText(_translate("MainWindow", " Consulta:"))
+        self.label_4.setText(_translate("MainWindow", "Resultado:"))
 
 
 
