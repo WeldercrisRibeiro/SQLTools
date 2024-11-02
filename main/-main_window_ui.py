@@ -39,21 +39,19 @@ class Ui_MainWindow(object):
         self.exit_button = QtWidgets.QPushButton(self.centralwidget)
         self.exit_button.setGeometry(QtCore.QRect(620, 440, 151, 30))
         self.exit_button.setMinimumSize(QtCore.QSize(100, 30))
-        self.exit_button.setStyleSheet("background-color: white; \n"
-"color: black;\n"
+        self.exit_button.setStyleSheet("background-color: red; \n"
+"color: white;\n"
 "text-transform: uppercase;\n"
 "font-weight: bold;\n"
-"border-radius: 10px\n"
 "")
         self.exit_button.setObjectName("exit_button")
         self.clear_button = QtWidgets.QPushButton(self.centralwidget)
         self.clear_button.setGeometry(QtCore.QRect(210, 440, 151, 30))
         self.clear_button.setMinimumSize(QtCore.QSize(100, 30))
-        self.clear_button.setStyleSheet("background-color: white;\n"
+        self.clear_button.setStyleSheet("background-color: yellow;\n"
 " color: black;\n"
 "text-transform: uppercase;\n"
 "font-weight: bold;\n"
-"border-radius: 10px\n"
 "")
         self.clear_button.setObjectName("clear_button")
         self.config_button = QtWidgets.QPushButton(self.centralwidget)
@@ -63,17 +61,16 @@ class Ui_MainWindow(object):
 "color: white;\n"
 "text-transform: uppercase;\n"
 "font-weight: bold;\n"
-"border-radius: 10px\n"
 "")
         self.config_button.setObjectName("config_button")
         self.execute_button = QtWidgets.QPushButton(self.centralwidget)
         self.execute_button.setGeometry(QtCore.QRect(20, 440, 151, 30))
         self.execute_button.setMinimumSize(QtCore.QSize(100, 30))
-        self.execute_button.setStyleSheet("background-color: blue;\n"
+        self.execute_button.setStyleSheet("background-color: green;\n"
 "color: white;\n"
 "text-transform: uppercase;\n"
 "font-weight: bold;\n"
-"border-radius: 10px")
+"")
         self.execute_button.setObjectName("execute_button")
         self.label_2 = QtWidgets.QLabel(self.centralwidget)
         self.label_2.setGeometry(QtCore.QRect(10, 80, 781, 20))
@@ -129,7 +126,7 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "SQLTools"))
+        MainWindow.setWindowTitle(_translate("MainWindow", "SQL Terminal"))
         self.exit_button.setText(_translate("MainWindow", "Sair - F10"))
         self.clear_button.setText(_translate("MainWindow", "Limpar - F6"))
         self.config_button.setText(_translate("MainWindow", "Configuração - F7"))

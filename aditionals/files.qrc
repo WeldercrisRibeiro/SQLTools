@@ -1,5 +1,7 @@
 <RCC>
   <qresource prefix="newPrefix">
+    <file>social.png</file>
+    <file>SQLToolsLogin.png</file>
     <file>sqltoolsLogo.png</file>
     <file>mac.png</file>
   </qresource>

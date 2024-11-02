@@ -71,10 +71,11 @@ font-weight: bold;
      </size>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: red; 
-color: white;
+     <string notr="true">background-color: white; 
+color: black;
 text-transform: uppercase;
 font-weight: bold;
+border-radius: 10px
 </string>
     </property>
     <property name="text">
@@ -97,10 +98,11 @@ font-weight: bold;
      </size>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: yellow;
+     <string notr="true">background-color: white;
  color: black;
 text-transform: uppercase;
 font-weight: bold;
+border-radius: 10px
 </string>
     </property>
     <property name="text">
@@ -127,6 +129,7 @@ font-weight: bold;
 color: white;
 text-transform: uppercase;
 font-weight: bold;
+border-radius: 10px
 </string>
     </property>
     <property name="text">
@@ -149,11 +152,11 @@ font-weight: bold;
      </size>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: green;
+     <string notr="true">background-color: blue;
 color: white;
 text-transform: uppercase;
 font-weight: bold;
-</string>
+border-radius: 10px</string>
     </property>
     <property name="text">
      <string>Executar - F5</string>
