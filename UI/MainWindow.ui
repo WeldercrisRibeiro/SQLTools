@@ -125,12 +125,11 @@ border-radius: 10px
      </size>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: blue; 
-color: white;
+     <string notr="true">background-color: white;
+color: black;
 text-transform: uppercase;
 font-weight: bold;
-border-radius: 10px
-</string>
+border-radius: 10px</string>
     </property>
     <property name="text">
      <string>Configuração - F7</string>
@@ -152,8 +151,8 @@ border-radius: 10px
      </size>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: blue;
-color: white;
+     <string notr="true">background-color: white;
+color: black;
 text-transform: uppercase;
 font-weight: bold;
 border-radius: 10px</string>

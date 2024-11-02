@@ -36,6 +36,8 @@ class Ui_MainWindow(object):
 "")
         self.result_text.setReadOnly(True)
         self.result_text.setObjectName("result_text")
+
+
         self.exit_button = QtWidgets.QPushButton(self.centralwidget)
         self.exit_button.setGeometry(QtCore.QRect(620, 440, 151, 30))
         self.exit_button.setMinimumSize(QtCore.QSize(100, 30))
@@ -56,38 +58,59 @@ class Ui_MainWindow(object):
 "border-radius: 10px\n"
 "")
         self.clear_button.setObjectName("clear_button")
+
+
         self.config_button = QtWidgets.QPushButton(self.centralwidget)
         self.config_button.setGeometry(QtCore.QRect(410, 440, 151, 30))
         self.config_button.setMinimumSize(QtCore.QSize(100, 30))
-        self.config_button.setStyleSheet("background-color: blue; \n"
-"color: white;\n"
-"text-transform: uppercase;\n"
-"font-weight: bold;\n"
-"border-radius: 10px\n"
-"")
-        self.config_button.setObjectName("config_button")
-        self.execute_button = QtWidgets.QPushButton(self.centralwidget)
-        self.execute_button.setGeometry(QtCore.QRect(20, 440, 151, 30))
-        self.execute_button.setMinimumSize(QtCore.QSize(100, 30))
-        self.execute_button.setStyleSheet("background-color: blue;\n"
-"color: white;\n"
+        self.config_button.setStyleSheet("background-color: white;\n"
+"color: black;\n"
 "text-transform: uppercase;\n"
 "font-weight: bold;\n"
 "border-radius: 10px")
+        self.config_button.setObjectName("config_button")
+
+        #config botão executar F5
+        self.execute_button = QtWidgets.QPushButton(self.centralwidget)
+        self.execute_button.setGeometry(QtCore.QRect(20, 440, 151, 30))
+        self.execute_button.setMinimumSize(QtCore.QSize(100, 30))
+        self.execute_button.setStyleSheet("""
+                                        #execute_button {
+                                          background-color: white;
+                                          color: black;
+                                          text-transform: uppercase;
+                                          font-weight: bold;
+                                          border-radius: 10px
+                                        }
+                                        #execute_button:hover {
+                                          background-color: blue;
+                                          color: white;
+                                             
+                                        }
+                                          
+                                        #execute_button:pressed {
+                                          background-color: aqua;
+                                          color: white;
+                                          }
+
+
+                                          """)
         self.execute_button.setObjectName("execute_button")
-        self.label_2 = QtWidgets.QLabel(self.centralwidget)
-        self.label_2.setGeometry(QtCore.QRect(10, 80, 781, 20))
+
+        #titulo consulta da tela antes do input das consultas
+        self.label_consulta = QtWidgets.QLabel(self.centralwidget)
+        self.label_consulta.setGeometry(QtCore.QRect(10, 80, 781, 20))
         font = QtGui.QFont()
         font.setBold(True)
         font.setWeight(75)
-        self.label_2.setFont(font)
-        self.label_2.setStyleSheet("color: rgb(255, 255, 255);\n"
-"background-color: rgb(0, 0, 0);\n"
-"\n"
-"text-transform: uppercase;\n"
-"font-weight: bold;\n"
-"")
-        self.label_2.setObjectName("label_2")
+        self.label_consulta.setFont(font)
+        self.label_consulta.setStyleSheet("color: rgb(255, 255, 255);\n"
+                                           "background-color: rgb(0, 0, 0);\n"
+                                             "\n"
+                                             "text-transform: uppercase;\n"
+                                             "font-weight: bold;\n"
+                                                "")
+        self.label_consulta.setObjectName("label_consulta")
         self.label_3 = QtWidgets.QLabel(self.centralwidget)
         self.label_3.setGeometry(QtCore.QRect(730, 10, 51, 31))
         self.label_3.setText("")
@@ -120,7 +143,7 @@ class Ui_MainWindow(object):
         self.config_button.raise_()
         self.execute_button.raise_()
         self.label_3.raise_()
-        self.label_2.raise_()
+        self.label_consulta.raise_()
         self.label_4.raise_()
         MainWindow.setCentralWidget(self.centralwidget)
 
@@ -134,7 +157,7 @@ class Ui_MainWindow(object):
         self.clear_button.setText(_translate("MainWindow", "Limpar - F6"))
         self.config_button.setText(_translate("MainWindow", "Configuração - F7"))
         self.execute_button.setText(_translate("MainWindow", "Executar - F5"))
-        self.label_2.setText(_translate("MainWindow", " Consulta:"))
+        self.label_consulta.setText(_translate("MainWindow", " Consulta:"))
         self.label_4.setText(_translate("MainWindow", "Resultado:"))
 
 

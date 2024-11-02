@@ -14,69 +14,61 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_LoginDialog(object):
     def setupUi(self, LoginDialog):
         LoginDialog.setObjectName("LoginDialog")
-        LoginDialog.resize(594, 359)
+        LoginDialog.resize(512, 234)
         LoginDialog.setStyleSheet("QDialog { background-color: black; color: white; }")
         self.user_label = QtWidgets.QLabel(LoginDialog)
-        self.user_label.setGeometry(QtCore.QRect(270, 80, 51, 16))
+        self.user_label.setGeometry(QtCore.QRect(220, 20, 51, 16))
         self.user_label.setStyleSheet("color: white;")
         self.user_label.setObjectName("user_label")
         self.user_entry = QtWidgets.QLineEdit(LoginDialog)
-        self.user_entry.setGeometry(QtCore.QRect(270, 110, 261, 31))
+        self.user_entry.setGeometry(QtCore.QRect(220, 50, 261, 31))
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.user_entry.sizePolicy().hasHeightForWidth())
         self.user_entry.setSizePolicy(sizePolicy)
-        self.user_entry.setStyleSheet("color: black; text-transform: uppercase; font-weight: bold;\n"
+        self.user_entry.setStyleSheet("color: black;\n"
 "border-radius: 10px")
         self.user_entry.setObjectName("user_entry")
         self.password_label = QtWidgets.QLabel(LoginDialog)
-        self.password_label.setGeometry(QtCore.QRect(270, 160, 51, 16))
-        self.password_label.setStyleSheet("color: white; ")
+        self.password_label.setGeometry(QtCore.QRect(220, 100, 51, 16))
+        self.password_label.setStyleSheet("color: white;")
         self.password_label.setObjectName("password_label")
         self.password_entry = QtWidgets.QLineEdit(LoginDialog)
-        self.password_entry.setGeometry(QtCore.QRect(270, 190, 261, 31))
+        self.password_entry.setGeometry(QtCore.QRect(220, 130, 261, 41))
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.password_entry.sizePolicy().hasHeightForWidth())
         self.password_entry.setSizePolicy(sizePolicy)
-        self.password_entry.setStyleSheet("color: black;\n""border-radius: 10px")
+        self.password_entry.setStyleSheet("color: black;\n"
+"border-radius: 10px")
         self.password_entry.setEchoMode(QtWidgets.QLineEdit.Password)
         self.password_entry.setObjectName("password_entry")
         self.login_button = QtWidgets.QPushButton(LoginDialog)
-        self.login_button.setGeometry(QtCore.QRect(300, 240, 201, 30))
+        self.login_button.setGeometry(QtCore.QRect(270, 190, 161, 30))
         font = QtGui.QFont()
         font.setBold(True)
         font.setWeight(75)
         self.login_button.setFont(font)
-        self.login_button.setStyleSheet("""
-             #login_button {
-                            background-color: rgb(0, 0, 255);
-                            border-radius: 5px;
-                            color: white;
-                          }
-             #login_button:hover {
-                             background-color: aqua;
-                                        color: blue;
-                                        }
-             #login_button:pressed {
-                             background-color: teal;
-                                        color: blue;
-                                        }                           
-
-""")
-
+        self.login_button.setStyleSheet("background-color: blue; color: white;\n"
+"border-radius: 5px")
         self.login_button.setObjectName("login_button")
         self.label = QtWidgets.QLabel(LoginDialog)
-        self.label.setGeometry(QtCore.QRect(0, 60, 261, 221))
+        self.label.setGeometry(QtCore.QRect(-20, 0, 261, 221))
         self.label.setText("")
         self.label.setPixmap(QtGui.QPixmap("src/img/SQLToolsLogin.png"))
         self.label.setScaledContents(True)
         self.label.setObjectName("label")
         self.label_2 = QtWidgets.QLabel(LoginDialog)
-        self.label_2.setGeometry(QtCore.QRect(520, 320, 51, 20))
+        self.label_2.setGeometry(QtCore.QRect(450, 10, 51, 20))
         self.label_2.setObjectName("label_2")
+        self.label_3 = QtWidgets.QLabel(LoginDialog)
+        self.label_3.setGeometry(QtCore.QRect(10, 200, 41, 21))
+        self.label_3.setText("")
+        self.label_3.setPixmap(QtGui.QPixmap("src/img/social.png"))
+        self.label_3.setScaledContents(True)
+        self.label_3.setObjectName("label_3")
         self.label.raise_()
         self.user_label.raise_()
         self.user_entry.raise_()
@@ -84,6 +76,7 @@ class Ui_LoginDialog(object):
         self.password_entry.raise_()
         self.login_button.raise_()
         self.label_2.raise_()
+        self.label_3.raise_()
 
         self.retranslateUi(LoginDialog)
         QtCore.QMetaObject.connectSlotsByName(LoginDialog)
