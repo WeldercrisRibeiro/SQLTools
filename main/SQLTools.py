@@ -11,7 +11,7 @@ import base64
 import pyodbc
 #import keyboard
 from configparser import ConfigParser
-from main.login_dialog_ui import Ui_LoginDialog
+from login_dialog_ui import Ui_LoginDialog
 from main_window_ui import Ui_MainWindow
 from server_config_dialog_ui import Ui_ServerConfigDialog
 
