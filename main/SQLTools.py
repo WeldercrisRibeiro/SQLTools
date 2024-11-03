@@ -80,22 +80,14 @@ class ServerConfigDialog(QDialog, Ui_ServerConfigDialog):
         super().__init__(parent)
         self.setupUi(self)
         self.setWindowTitle("Configuração do Servidor")
-        self.set_button_colors()
+        
         self.load_configurations()
-        #self.shorcut_pgdwn = QShortcut(QKeySequence("PageDown"),self)
-        #self.save_button.clicked.connect(self.save_configurations)
-
-
+        
         self.shortcut_pgdwn = QShortcut(QKeySequence("F8"), self)
         self.shortcut_pgdwn.activated.connect(self.save_configurations)
 
         self.save_button.clicked.connect(self.save_configurations)
 
-        #keyboard.add_hotkey("PageDown", self.save_configurations)
-
-
-    def set_button_colors(self):
-        self.save_button.setStyleSheet("background-color: blue; color: white;")
 
     def load_configurations(self):
         config = ConfigParser()
@@ -131,7 +123,7 @@ class ServerConfigDialog(QDialog, Ui_ServerConfigDialog):
         msg_box.setText("Configurações do servidor salvas com sucesso!")
 
         #Definir estilos para o texto e o botão
-        msg_box.setStyleSheet("QLabel{color: black;font-weight:bold;;} QPushButton{background-color: blue; color: white; }")
+        msg_box.setStyleSheet("QLabel{color: black;font-weight:bold;;} QPushButton{background-color: blue; color: white;min-height: 20; min-width: 100px;border-radius: 10px} QPushButton:hover {background-color: aqua; color: black;} ")
 
         msg_box.exec_()
         self.accept()
