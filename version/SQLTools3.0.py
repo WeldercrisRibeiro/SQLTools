@@ -14,7 +14,7 @@ from configparser import ConfigParser
 
 from login_dialog_ui import Ui_LoginDialog
 from main.main_window_ui import Ui_MainWindow
-from server_config_dialog_ui import Ui_ServerConfigDialog
+from main.server_config_dialog_ui import Ui_ServerConfigDialog
 
 
 class LoginDialog(QDialog, Ui_LoginDialog):

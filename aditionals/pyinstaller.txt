@@ -5,6 +5,8 @@ pyinstaller --onefile --noconsole --icon=src/icons/sql.ico main/SQLTools.py
 pyuic5 -x UI/MainWindow.ui -o main/main_window_ui.py
 pyuic5 -x UI/LoginDialog.ui -o main/login_dialog_ui.py
 
+pyuic5 -x UI/server_config_dialog.ui -o server_config_dialog_ui.py
+
 
 pyinstaller C:/INFARMA/WEL/ESTUDOS/PROGRAMACAO/YT/ytDownload.py
 

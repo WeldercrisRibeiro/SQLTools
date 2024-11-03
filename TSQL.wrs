@@ -6,7 +6,16 @@
 2024-11-02 16:01:31 - WELDER - select * from empre
 2024-11-02 17:09:12 - Conectado - LOCALHOST -
 2024-11-02 17:09:13 - WELDER - select *from empre
-2024-11-02 19:03:14 - Conectado - LOCALHOST -
-2024-11-02 19:03:15 - WELDER - select * from empre
-2024-11-02 19:03:16 - Conectado - LOCALHOST -
-2024-11-02 19:03:16 - WELDER - select * from empre
+2024-11-02 20:38:27 - Conectado - LOCALHOST -
+2024-11-02 20:39:42 - Conectado - LOCALHOST -
+2024-11-02 20:40:05 - Conectado - LOCALHOST -
+2024-11-02 20:40:05 - WELDER - Não foi possível conectar ao banco de dados: ('08001', '[08001] [Microsoft][ODBC Driver 17 for SQL Server]Provedor de Pipes Nomeados: Não foi possível abrir uma conexão com o SQL Server [2].  (2) (SQLDriverConnect); [08001] [Microsoft][ODBC Driver 17 for SQL Server]O tempo limite do logon expirou (0); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Erro relatado pela rede ou específico à instância ao estabelecer conexão com o SQL Server. O servidor não foi encontrado ou não está acessível. Verifique se o nome da instância está correto e se o SQL Server está configurado para permitir conexões remotas. Para obter mais informações, consulte os Manuais Online do SQL Server. (2)')
+2024-11-02 20:40:17 - Conectado - LOCALHOST -
+2024-11-02 20:40:37 - Conectado - LOCALHOST -
+2024-11-02 20:40:37 - WELDER - Não foi possível conectar ao banco de dados: ('08001', '[08001] [Microsoft][ODBC Driver 17 for SQL Server]Provedor de Pipes Nomeados: Não foi possível abrir uma conexão com o SQL Server [2].  (2) (SQLDriverConnect); [08001] [Microsoft][ODBC Driver 17 for SQL Server]O tempo limite do logon expirou (0); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Erro relatado pela rede ou específico à instância ao estabelecer conexão com o SQL Server. O servidor não foi encontrado ou não está acessível. Verifique se o nome da instância está correto e se o SQL Server está configurado para permitir conexões remotas. Para obter mais informações, consulte os Manuais Online do SQL Server. (2)')
+2024-11-02 20:42:01 - Conectado - SUPVRJ42\SQL2019 -
+2024-11-02 20:42:02 - WELDER - select * from empre
+2024-11-02 20:49:48 - Conectado - SUPVRJ42\SQL2019 -
+2024-11-02 20:49:48 - WELDER - select * from empre
+2024-11-02 20:49:51 - Conectado - SUPVRJ42\SQL2019 -
+2024-11-02 20:49:51 - WELDER - select * from empre
