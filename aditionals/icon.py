@@ -1,7 +1,7 @@
 import base64
 
 # Substitua pelo caminho do seu ícone (.ico, por exemplo)
-icon_path = 'sql.ico'
+icon_path = 'src/icons/sqlIco.ico'
 
 def icon_to_base64(icon_path):
     with open(icon_path, 'rb') as icon_file:
