@@ -350,7 +350,7 @@ class SQLTerminalApp(QMainWindow, Ui_MainWindow):
                         self.result_text.append(str(row))
                 else:
                     conn.commit()
-                    QMessageBox.information(self, "Consulta Executada", "Consulta executada com sucesso.")
+                    QMessageBox.information(self, "Atenção!", "Erro! Verifique as conexões e tente novamente! ")
 
                 cursor.close()
                 conn.close()

@@ -26,3 +26,37 @@
 2024-11-03 11:26:53 - WELDER - select * from empre
 2024-11-03 11:27:00 - Conectado - localhost -
 2024-11-03 11:27:00 - WELDER - select * from empre
+2024-11-03 19:20:05 - Conectado - localhost -
+2024-11-03 19:20:06 - WELDER - select * from empre
+2024-11-03 19:21:47 - Conectado - localhost -
+2024-11-03 19:21:47 - WELDER - 
+select * from empre
+2024-11-03 19:21:50 - Conectado - localhost -
+2024-11-03 19:21:51 - WELDER - 
+select * from empre
+2024-11-03 19:21:53 - Conectado - localhost -
+2024-11-03 19:21:53 - WELDER - 
+select * from empre
+2024-11-03 19:22:00 - Conectado - localhost -
+2024-11-03 19:22:00 - WELDER - 
+select * from empre
+2024-11-03 19:22:26 - Conectado - localhost -
+2024-11-03 19:22:26 - WELDER - select * from empre
+2024-11-03 19:25:29 - Conectado - localhost -
+2024-11-03 19:25:29 - WELDER - select * from empr
+2024-11-03 19:25:33 - WELDER - select * from empr
+2024-11-03 19:25:33 - WELDER - Erro ao executar a consulta: ('42S02', "[42S02] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Nome de objeto inválido 'empr'. (208) (SQLExecDirectW)")
+2024-11-03 19:25:35 - Conectado - localhost -
+2024-11-03 19:25:35 - WELDER - select * from empre
+2024-11-03 19:25:59 - Conectado - localhost -
+2024-11-03 19:26:01 - WELDER - Erro ao executar a consulta: ('HY090', '[HY090] [Microsoft][ODBC Driver Manager] Comprimento inválido de cadeia de caracteres ou de buffer (0) (SQLExecDirectW)')
+2024-11-03 19:26:05 - Conectado - localhost -
+2024-11-03 19:26:05 - WELDER - select * from empre
+2024-11-03 19:26:10 - Conectado - localhost -
+2024-11-03 19:26:10 - WELDER - select * from empr
+2024-11-03 19:26:12 - WELDER - select * from empr
+2024-11-03 19:26:12 - WELDER - Erro ao executar a consulta: ('42S02', "[42S02] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Nome de objeto inválido 'empr'. (208) (SQLExecDirectW)")
+2024-11-03 19:27:12 - Conectado - localhost -
+2024-11-03 19:27:13 - WELDER - Erro ao executar a consulta: ('HY090', '[HY090] [Microsoft][ODBC Driver Manager] Comprimento inválido de cadeia de caracteres ou de buffer (0) (SQLExecDirectW)')
+2024-11-03 19:27:16 - Conectado - localhost -
+2024-11-03 19:27:16 - WELDER - select * from empre

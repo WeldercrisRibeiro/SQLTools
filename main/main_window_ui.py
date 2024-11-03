@@ -27,9 +27,10 @@ class Ui_MainWindow(object):
 "\n"
 "/*font: 75 8pt \"Cascadia Code\";*/")
         self.query_entry.setObjectName("query_entry")
+        
         self.result_text = QtWidgets.QTextEdit(self.centralwidget)
         self.result_text.setGeometry(QtCore.QRect(9, 262, 782, 151))
-        self.result_text.setStyleSheet("color: green;\n"
+        self.result_text.setStyleSheet("color: white;\n"
 "background-color: rgb(0, 0, 0);\n"
 "text-transform: uppercase;\n"
 "font-weight: bold;\n"
