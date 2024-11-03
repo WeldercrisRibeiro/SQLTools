@@ -41,33 +41,68 @@ class Ui_MainWindow(object):
         self.exit_button = QtWidgets.QPushButton(self.centralwidget)
         self.exit_button.setGeometry(QtCore.QRect(620, 440, 151, 30))
         self.exit_button.setMinimumSize(QtCore.QSize(100, 30))
-        self.exit_button.setStyleSheet("background-color: white; \n"
-"color: black;\n"
-"text-transform: uppercase;\n"
-"font-weight: bold;\n"
-"border-radius: 10px\n"
-"")
+        self.exit_button.setStyleSheet("""#exit_button {
+                                          background-color: white;
+                                          color: black;
+                                          text-transform: uppercase;
+                                          font-weight: bold;
+                                          border-radius: 10px
+                                        }
+                                        #exit_button:hover {
+                                          background-color: blue;
+                                          color: white;
+                                             
+                                        }
+                                          
+                                        #exit_button:pressed {
+                                          background-color: aqua;
+                                          color: white;
+                                          }""")
         self.exit_button.setObjectName("exit_button")
+
         self.clear_button = QtWidgets.QPushButton(self.centralwidget)
         self.clear_button.setGeometry(QtCore.QRect(210, 440, 151, 30))
         self.clear_button.setMinimumSize(QtCore.QSize(100, 30))
-        self.clear_button.setStyleSheet("background-color: white;\n"
-" color: black;\n"
-"text-transform: uppercase;\n"
-"font-weight: bold;\n"
-"border-radius: 10px\n"
-"")
+        self.clear_button.setStyleSheet("""#clear_button {
+                                          background-color: white;
+                                          color: black;
+                                          text-transform: uppercase;
+                                          font-weight: bold;
+                                          border-radius: 10px
+                                        }
+                                        #clear_button:hover {
+                                          background-color: blue;
+                                          color: white;
+                                             
+                                        }
+                                          
+                                        #clear_button:pressed {
+                                          background-color: aqua;
+                                          color: white;
+                                          }""")
         self.clear_button.setObjectName("clear_button")
 
 
         self.config_button = QtWidgets.QPushButton(self.centralwidget)
         self.config_button.setGeometry(QtCore.QRect(410, 440, 151, 30))
         self.config_button.setMinimumSize(QtCore.QSize(100, 30))
-        self.config_button.setStyleSheet("background-color: white;\n"
-"color: black;\n"
-"text-transform: uppercase;\n"
-"font-weight: bold;\n"
-"border-radius: 10px")
+        self.config_button.setStyleSheet("""#config_button {
+                                          background-color: white;
+                                          color: black;
+                                          text-transform: uppercase;
+                                          font-weight: bold;
+                                          border-radius: 10px
+                                        }
+                                        #config_button:hover {
+                                          background-color: blue;
+                                          color: white;
+                                             
+                                        }
+                                          
+                                        #config_button:pressed {
+                                          background-color: aqua;
+                                          color: white;
+                                          }""")
         self.config_button.setObjectName("config_button")
 
         #config botão executar F5
@@ -111,24 +146,26 @@ class Ui_MainWindow(object):
                                              "font-weight: bold;\n"
                                                 "")
         self.label_consulta.setObjectName("label_consulta")
-        self.label_3 = QtWidgets.QLabel(self.centralwidget)
-        self.label_3.setGeometry(QtCore.QRect(730, 10, 51, 31))
-        self.label_3.setText("")
-        self.label_3.setPixmap(QtGui.QPixmap("src/img/mac.png"))
-        self.label_3.setScaledContents(True)
-        self.label_3.setObjectName("label_3")
-        self.label_4 = QtWidgets.QLabel(self.centralwidget)
-        self.label_4.setGeometry(QtCore.QRect(10, 230, 781, 20))
+
+
+        self.label_icomac = QtWidgets.QLabel(self.centralwidget)
+        self.label_icomac.setGeometry(QtCore.QRect(730, 10, 51, 31))
+        self.label_icomac.setText("")
+        self.label_icomac.setPixmap(QtGui.QPixmap("src/img/mac.png"))
+        self.label_icomac.setScaledContents(True)
+        self.label_icomac.setObjectName("label_icomac")
+        self.label_resultado = QtWidgets.QLabel(self.centralwidget)
+        self.label_resultado.setGeometry(QtCore.QRect(10, 230, 781, 20))
         font = QtGui.QFont()
         font.setBold(True)
         font.setWeight(75)
-        self.label_4.setFont(font)
-        self.label_4.setStyleSheet("color: rgb(255, 255, 255);\n"
+        self.label_resultado.setFont(font)
+        self.label_resultado.setStyleSheet("color: rgb(255, 255, 255);\n"
 "background-color: rgb(0, 0, 0);\n"
 "text-transform: uppercase;\n"
 "font-weight: bold;\n"
 "")
-        self.label_4.setObjectName("label_4")
+        self.label_resultado.setObjectName("label_resultado")
         self.label = QtWidgets.QLabel(self.centralwidget)
         self.label.setGeometry(QtCore.QRect(10, 0, 161, 91))
         self.label.setText("")
@@ -142,9 +179,9 @@ class Ui_MainWindow(object):
         self.clear_button.raise_()
         self.config_button.raise_()
         self.execute_button.raise_()
-        self.label_3.raise_()
+        self.label_icomac.raise_()
         self.label_consulta.raise_()
-        self.label_4.raise_()
+        self.label_resultado.raise_()
         MainWindow.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(MainWindow)
@@ -158,7 +195,7 @@ class Ui_MainWindow(object):
         self.config_button.setText(_translate("MainWindow", "Configuração - F7"))
         self.execute_button.setText(_translate("MainWindow", "Executar - F5"))
         self.label_consulta.setText(_translate("MainWindow", " Consulta:"))
-        self.label_4.setText(_translate("MainWindow", "Resultado:"))
+        self.label_resultado.setText(_translate("MainWindow", "Resultado:"))
 
 
 

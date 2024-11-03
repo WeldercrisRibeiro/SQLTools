@@ -402,6 +402,7 @@ class SQLTerminalApp(QMainWindow, Ui_MainWindow):
       msg_box = QMessageBox(self)
       msg_box.setWindowTitle("Fechar Aplicação")
       msg_box.setText("Tem certeza que deseja sair?")
+      msg_box.setStyleSheet("font-weight:bold")
 
     
       btn_sim = msg_box.addButton("Sim", QMessageBox.YesRole)
