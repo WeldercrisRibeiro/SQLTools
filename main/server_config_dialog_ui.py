@@ -42,7 +42,7 @@ class Ui_ServerConfigDialog(object):
         
         self.formLayout.setWidget(1, QtWidgets.QFormLayout.LabelRole, self.labelDatabase)
         self.database_entry = QtWidgets.QLineEdit(self.formLayoutWidget)
-        self.database_entry.setStyleSheet(""" #server_entry {
+        self.database_entry.setStyleSheet(""" #database_entry {
                                         font-weight: bold;
                                         color: white;
                                         background-color: black;
@@ -77,30 +77,28 @@ class Ui_ServerConfigDialog(object):
                                          "text-transform: uppercase;")
         self.password_entry.setEchoMode(QtWidgets.QLineEdit.Password)
         self.password_entry.setObjectName("password_entry")
+
         self.formLayout.setWidget(3, QtWidgets.QFormLayout.FieldRole, self.password_entry)
         self.verticalLayout.addWidget(self.formLayoutWidget)
+
         self.save_button = QtWidgets.QPushButton(ServerConfigDialog)
+        self.verticalLayout.addWidget(self.save_button)
+        self.save_button.setObjectName("save_button")
         self.save_button.setStyleSheet("""
                                        #save_button {
-                            background-color: blue;
-                            border-radius: 5px;
-                            color: white;
-                          }
-             #save_button:hover {
-                             background-color: aqua;
-                                        color: blue;
+                                             background-color: blue;
+                                             border-radius: 5px;
+                                             color: white;
+                                                    }
+                                       #save_button:hover {
+                                            background-color: aqua;
+                                            color: blue;
+                                                          }
+                                      #save_button:pressed {
+                                            background-color: teal;
+                                            color: blue;
                                         }
-             #save_button:pressed {
-                             background-color: teal;
-                                        color: blue;
-                                        }""")
-        
-        
-        
-        self.save_button.setObjectName("save_button")
-        
-        self.verticalLayout.addWidget(self.save_button)
-
+                                       """)
         self.retranslateUi(ServerConfigDialog)
         QtCore.QMetaObject.connectSlotsByName(ServerConfigDialog)
 

@@ -1,5 +1,5 @@
 from PyQt5.QtWidgets import QApplication, QMainWindow, QDialog, QMessageBox, QVBoxLayout, QShortcut, QLineEdit, QToolBar, QPushButton, QAction, QListWidget, QFormLayout, QCheckBox, QLabel, QHBoxLayout
-from PyQt5.QtGui import QIcon, QKeySequence
+from PyQt5.QtGui import QIcon, QKeySequence,QPixmap
 from PyQt5 import QtGui
 import sys
 import os
@@ -50,7 +50,7 @@ class LoginDialog(QDialog, Ui_LoginDialog):
         if user in credentials and password == credentials[user]:
             self.accept()
         else:
-            self.show_critical_message("Login Falhou", "Usuário ou senha inválidos")
+            self.show_critical_message("Erro!", "Usuário ou senha inválidos!")
 
     def get_credentials(self):
         return {
@@ -68,10 +68,11 @@ class LoginDialog(QDialog, Ui_LoginDialog):
 
     def show_critical_message(self, title, message):
         msg = QMessageBox()
-        msg.setIcon(QMessageBox.Critical)
+        msg.setIcon(QMessageBox.Warning)
         msg.setWindowTitle(title)
+        msg.setWindowIcon(QIcon("src/icons/sqlIco.ico"))
         msg.setText(message)
-        msg.setStyleSheet("QLabel{color: red;}")
+        msg.setStyleSheet("QLabel{color: red; font-weight: bold;}")
         msg.exec_()
 
 class ServerConfigDialog(QDialog, Ui_ServerConfigDialog):
@@ -94,7 +95,7 @@ class ServerConfigDialog(QDialog, Ui_ServerConfigDialog):
 
 
     def set_button_colors(self):
-        self.save_button.setStyleSheet("background-color: #4CAF50; color: white;")
+        self.save_button.setStyleSheet("background-color: blue; color: white;")
 
     def load_configurations(self):
         config = ConfigParser()
@@ -119,10 +120,18 @@ class ServerConfigDialog(QDialog, Ui_ServerConfigDialog):
             config.write(configfile)
 
         msg_box = QMessageBox()
-        msg_box.setIcon(QMessageBox.Information)
-        msg_box.setWindowTitle("Configurações Salvas")
-        msg_box.setText("Configurações do servidor salvas com sucesso.")
-        msg_box.setStyleSheet("QLabel{color: black;} QPushButton{background-color: green; color: white;}")
+
+        # Carregar o ícone e redimensioná-lo
+        pixmap = QPixmap("src/icons/iconSucess-removebg.ico").scaled(64, 64)  # Ajuste o tamanho conforme necessário (largura, altura)
+        msg_box.setIconPixmap(pixmap)
+
+        msg_box.setWindowTitle("Sucesso!")
+        msg_box.setWindowIcon(QIcon("src/icons/sqlIco.ico"))
+        
+        msg_box.setText("Configurações do servidor salvas com sucesso!")
+
+        #Definir estilos para o texto e o botão
+        msg_box.setStyleSheet("QLabel{color: black;font-weight:bold;;} QPushButton{background-color: blue; color: white; }")
 
         msg_box.exec_()
         self.accept()
@@ -274,14 +283,11 @@ class SQLTerminalApp(QMainWindow, Ui_MainWindow):
         y = (screen_geometry.height() - self.frameSize().height()) // 2
         self.move(x, y)
 
-    def sair(self):
-        self.close()
 
     def autenticar_usuario(self):
         usuario = self.login_dialog.user_entry.text().upper()
         senha = self.login_dialog.password_entry.text()
 
-        
         usuarios = self.get_users()
         
         if usuario in usuarios and usuarios[usuario]['password'] == senha:
@@ -289,6 +295,25 @@ class SQLTerminalApp(QMainWindow, Ui_MainWindow):
         else:
             self.show_critical_message("Autenticação Falhou", "Usuário ou senha inválidos.")
             return False
+
+    def conectar_bd(self):
+        config = self.ler_ou_criar_configuracoes()
+        server = config['SQLServer']['server']
+        database = config['SQLServer']['database']
+        username = config['SQLServer']['username']
+        password = config['SQLServer']['password']
+
+        usuario = self.login_dialog.user_entry.text().upper()
+        self.registrar_log(usuario, None, server)
+
+        try:
+            conn = pyodbc.connect(f'DRIVER={{ODBC Driver 17 for SQL Server}};SERVER={server};DATABASE={database};UID={username};PWD={password}')
+            return conn
+        except pyodbc.Error as e:
+            self.show_critical_message("Erro de Conexão", f"Não foi possível conectar ao banco de dados: {e}")
+            self.registrar_log(usuario, None, server, f"Não foi possível conectar ao banco de dados: {e}")
+            return None
+
 
     def registrar_log(self, usuario,comando, servidor=None, erro=None):
         caminho_log = 'TSQL.wrs'
@@ -364,23 +389,6 @@ class SQLTerminalApp(QMainWindow, Ui_MainWindow):
 
         return config
 
-    def conectar_bd(self):
-        config = self.ler_ou_criar_configuracoes()
-        server = config['SQLServer']['server']
-        database = config['SQLServer']['database']
-        username = config['SQLServer']['username']
-        password = config['SQLServer']['password']
-
-        usuario = self.login_dialog.user_entry.text().upper()
-        self.registrar_log(usuario, None, server)
-
-        try:
-            conn = pyodbc.connect(f'DRIVER={{ODBC Driver 17 for SQL Server}};SERVER={server};DATABASE={database};UID={username};PWD={password}')
-            return conn
-        except pyodbc.Error as e:
-            self.show_critical_message("Erro de Conexão", f"Não foi possível conectar ao banco de dados: {e}")
-            self.registrar_log(usuario, None, server, f"Não foi possível conectar ao banco de dados: {e}")
-            return None
 
     def show_critical_message(self, title, message):
         msg = QMessageBox()
@@ -388,12 +396,12 @@ class SQLTerminalApp(QMainWindow, Ui_MainWindow):
         msg.setWindowTitle(title)
         msg.setText(message)
         msg.setStyleSheet("QLabel{color: red;}")
-        self.setWindowIcon(QIcon("src/icons/sqlIco.ico")) 
+        msg.setWindowIcon(QIcon("src/icons/sqlIco.ico")) 
         msg.exec_()
 
     def abrir_configuracao_servidor(self):
         config_dialog = ServerConfigDialog(self)
-        #config_dialog.setStyleSheet("color: white;")
+        config_dialog.setStyleSheet("color: white;")
         config_dialog.exec_()
 
     
@@ -403,6 +411,7 @@ class SQLTerminalApp(QMainWindow, Ui_MainWindow):
       msg_box.setWindowTitle("Fechar Aplicação")
       msg_box.setText("Tem certeza que deseja sair?")
       msg_box.setStyleSheet("font-weight:bold")
+      msg_box.setWindowIcon(QIcon("src/icons/sqlIco.ico"))
 
     
       btn_sim = msg_box.addButton("Sim", QMessageBox.YesRole)
@@ -420,7 +429,9 @@ class SQLTerminalApp(QMainWindow, Ui_MainWindow):
       else:
         event.ignore()
 
-    
+    def sair(self):
+        self.close()
+ 
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)

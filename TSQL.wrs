@@ -19,3 +19,6 @@
 2024-11-02 20:49:48 - WELDER - select * from empre
 2024-11-02 20:49:51 - Conectado - SUPVRJ42\SQL2019 -
 2024-11-02 20:49:51 - WELDER - select * from empre
+2024-11-03 10:44:17 - Conectado - csdfgsdfsd -
+2024-11-03 10:57:10 - Conectado - csdfgsdfsd -
+2024-11-03 10:57:10 - WELDER - Não foi possível conectar ao banco de dados: ('08001', '[08001] [Microsoft][ODBC Driver 17 for SQL Server]Provedor de Pipes Nomeados: Não foi possível abrir uma conexão com o SQL Server [53].  (53) (SQLDriverConnect); [08001] [Microsoft][ODBC Driver 17 for SQL Server]O tempo limite do logon expirou (0); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Erro relatado pela rede ou específico à instância ao estabelecer conexão com o SQL Server. O servidor não foi encontrado ou não está acessível. Verifique se o nome da instância está correto e se o SQL Server está configurado para permitir conexões remotas. Para obter mais informações, consulte os Manuais Online do SQL Server. (53)')
