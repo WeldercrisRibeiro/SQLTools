@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>800</width>
-    <height>485</height>
+    <height>541</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -20,9 +20,9 @@
    <widget class="QTextEdit" name="query_entry">
     <property name="geometry">
      <rect>
-      <x>9</x>
+      <x>10</x>
       <y>112</y>
-      <width>782</width>
+      <width>781</width>
       <height>101</height>
      </rect>
     </property>
@@ -39,9 +39,9 @@ font-weight: bold;
     <property name="geometry">
      <rect>
       <x>9</x>
-      <y>262</y>
+      <y>272</y>
       <width>782</width>
-      <height>151</height>
+      <height>201</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -59,7 +59,7 @@ font-weight: bold;
     <property name="geometry">
      <rect>
       <x>620</x>
-      <y>440</y>
+      <y>510</y>
       <width>151</width>
       <height>30</height>
      </rect>
@@ -86,7 +86,7 @@ border-radius: 10px
     <property name="geometry">
      <rect>
       <x>210</x>
-      <y>440</y>
+      <y>510</y>
       <width>151</width>
       <height>30</height>
      </rect>
@@ -113,7 +113,7 @@ border-radius: 10px
     <property name="geometry">
      <rect>
       <x>410</x>
-      <y>440</y>
+      <y>510</y>
       <width>151</width>
       <height>30</height>
      </rect>
@@ -139,7 +139,7 @@ border-radius: 10px</string>
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>440</y>
+      <y>510</y>
       <width>151</width>
       <height>30</height>
      </rect>
@@ -252,16 +252,33 @@ font-weight: bold;
      <bool>true</bool>
     </property>
    </widget>
+   <widget class="QLabel" name="label_5">
+    <property name="geometry">
+     <rect>
+      <x>-30</x>
+      <y>510</y>
+      <width>851</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <zorder>label_5</zorder>
    <zorder>label</zorder>
    <zorder>query_entry</zorder>
    <zorder>result_text</zorder>
    <zorder>exit_button</zorder>
    <zorder>clear_button</zorder>
    <zorder>config_button</zorder>
-   <zorder>execute_button</zorder>
    <zorder>label_3</zorder>
    <zorder>label_2</zorder>
    <zorder>label_4</zorder>
+   <zorder>execute_button</zorder>
   </widget>
  </widget>
  <resources>

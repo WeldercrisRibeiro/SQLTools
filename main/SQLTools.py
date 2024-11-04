@@ -410,7 +410,7 @@ class SQLTerminalApp(QMainWindow, Ui_MainWindow):
       btn_nao = msg_box.addButton("Não", QMessageBox.NoRole)
 
     
-      btn_sim.setStyleSheet("background-color: blue; color: white; padding: 5px 10px; font-size: 14px;")
+      btn_sim.setStyleSheet("""background-color: blue; color: white; padding: 5px 10px; font-size: 14px;""")
       btn_nao.setStyleSheet("background-color: red; color: white; padding: 5px 10px; font-size: 14px;")
 
     

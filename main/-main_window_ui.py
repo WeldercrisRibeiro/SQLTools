@@ -4,12 +4,12 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(800, 541)
+        MainWindow.resize(800, 485)
         MainWindow.setStyleSheet("background-color: rgb(0, 0, 0);")
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.query_entry = QtWidgets.QTextEdit(self.centralwidget)
-        self.query_entry.setGeometry(QtCore.QRect(20, 112, 771, 101))
+        self.query_entry.setGeometry(QtCore.QRect(9, 112, 782, 101))
         self.query_entry.setStyleSheet("color: white;\n"
 "background-color: rgb(0, 0, 0);\n"
 "text-transform: uppercase;\n"
@@ -17,8 +17,9 @@ class Ui_MainWindow(object):
 "\n"
 "/*font: 75 8pt \"Cascadia Code\";*/")
         self.query_entry.setObjectName("query_entry")
+        
         self.result_text = QtWidgets.QTextEdit(self.centralwidget)
-        self.result_text.setGeometry(QtCore.QRect(9, 272, 782, 201))
+        self.result_text.setGeometry(QtCore.QRect(9, 262, 782, 151))
         self.result_text.setStyleSheet("color: white;\n"
 "background-color: rgb(0, 0, 0);\n"
 "text-transform: uppercase;\n"
@@ -26,8 +27,10 @@ class Ui_MainWindow(object):
 "")
         self.result_text.setReadOnly(True)
         self.result_text.setObjectName("result_text")
+
+
         self.exit_button = QtWidgets.QPushButton(self.centralwidget)
-        self.exit_button.setGeometry(QtCore.QRect(620, 510, 151, 30))
+        self.exit_button.setGeometry(QtCore.QRect(620, 440, 151, 30))
         self.exit_button.setMinimumSize(QtCore.QSize(100, 30))
         self.exit_button.setStyleSheet("""#exit_button {
                                           background-color: white;
@@ -47,8 +50,9 @@ class Ui_MainWindow(object):
                                           color: white;
                                           }""")
         self.exit_button.setObjectName("exit_button")
+
         self.clear_button = QtWidgets.QPushButton(self.centralwidget)
-        self.clear_button.setGeometry(QtCore.QRect(210, 510, 151, 30))
+        self.clear_button.setGeometry(QtCore.QRect(210, 440, 151, 30))
         self.clear_button.setMinimumSize(QtCore.QSize(100, 30))
         self.clear_button.setStyleSheet("""#clear_button {
                                           background-color: white;
@@ -68,8 +72,10 @@ class Ui_MainWindow(object):
                                           color: white;
                                           }""")
         self.clear_button.setObjectName("clear_button")
+
+
         self.config_button = QtWidgets.QPushButton(self.centralwidget)
-        self.config_button.setGeometry(QtCore.QRect(410, 510, 151, 30))
+        self.config_button.setGeometry(QtCore.QRect(410, 440, 151, 30))
         self.config_button.setMinimumSize(QtCore.QSize(100, 30))
         self.config_button.setStyleSheet("""#config_button {
                                           background-color: white;
@@ -90,8 +96,9 @@ class Ui_MainWindow(object):
                                           }""")
         self.config_button.setObjectName("config_button")
 
+        #config botão executar F5
         self.execute_button = QtWidgets.QPushButton(self.centralwidget)
-        self.execute_button.setGeometry(QtCore.QRect(20, 510, 151, 30))
+        self.execute_button.setGeometry(QtCore.QRect(20, 440, 151, 30))
         self.execute_button.setMinimumSize(QtCore.QSize(100, 30))
         self.execute_button.setStyleSheet("""
                                         #execute_button {
@@ -115,6 +122,8 @@ class Ui_MainWindow(object):
 
                                           """)
         self.execute_button.setObjectName("execute_button")
+
+        #titulo consulta da tela antes do input das consultas
         self.label_consulta = QtWidgets.QLabel(self.centralwidget)
         self.label_consulta.setGeometry(QtCore.QRect(10, 80, 781, 20))
         font = QtGui.QFont()
@@ -122,12 +131,14 @@ class Ui_MainWindow(object):
         font.setWeight(75)
         self.label_consulta.setFont(font)
         self.label_consulta.setStyleSheet("color: rgb(255, 255, 255);\n"
-"background-color: rgb(0, 0, 0);\n"
-"\n"
-"text-transform: uppercase;\n"
-"font-weight: bold;\n"
-"")
+                                           "background-color: rgb(0, 0, 0);\n"
+                                             "\n"
+                                             "text-transform: uppercase;\n"
+                                             "font-weight: bold;\n"
+                                                "")
         self.label_consulta.setObjectName("label_consulta")
+
+
         self.label_icomac = QtWidgets.QLabel(self.centralwidget)
         self.label_icomac.setGeometry(QtCore.QRect(730, 10, 51, 31))
         self.label_icomac.setText("")
@@ -152,12 +163,6 @@ class Ui_MainWindow(object):
         self.label.setPixmap(QtGui.QPixmap("src/img/sqltoolsLogo.png"))
         self.label.setScaledContents(True)
         self.label.setObjectName("label")
-        self.label_background_button = QtWidgets.QLabel(self.centralwidget)
-        self.label_background_button.setGeometry(QtCore.QRect(-30, 510, 851, 71))
-        self.label_background_button.setStyleSheet("background-color: rgb(255, 255, 255);")
-        self.label_background_button.setText("")
-        self.label_background_button.setObjectName("label_background_button")
-        self.label_background_button.raise_()
         self.label.raise_()
         self.query_entry.raise_()
         self.result_text.raise_()
