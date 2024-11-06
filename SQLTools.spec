@@ -35,5 +35,5 @@ exe = EXE(
     target_arch=None,
     codesign_identity=None,
     entitlements_file=None,
-    icon=['src\\icons\\sql.ico'],
+    icon=['src\\icons\\sqlIco.ico'],
 )

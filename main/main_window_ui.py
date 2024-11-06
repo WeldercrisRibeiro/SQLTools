@@ -9,7 +9,7 @@ class Ui_MainWindow(object):
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.query_entry = QtWidgets.QTextEdit(self.centralwidget)
-        self.query_entry.setGeometry(QtCore.QRect(20, 112, 771, 101))
+        self.query_entry.setGeometry(QtCore.QRect(9, 112, 771, 101))
         self.query_entry.setStyleSheet("color: white;\n"
 "background-color: rgb(0, 0, 0);\n"
 "text-transform: uppercase;\n"
